@@ -54,13 +54,15 @@
       <section class="flex new-tweet">
         <h2 class="flex tweet-title">Compose Tweet</h2>
         <form action="/tweets" method="POST">
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <textarea name="text" id="tweet-text" onkeyup="charUpdate(this.value)" placeholder="What are you humming about?"></textarea>
           <footer class="flex tweet-interface">
             <button class="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <output id="counter" name="counter" class="counter" for="tweet-text">140</output>
           </footer>
         </form>
       </section>
     </main>
+
+    <script src="scripts/client.js"></script>
   </body>
 </html>
