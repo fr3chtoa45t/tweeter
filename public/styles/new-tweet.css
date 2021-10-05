@@ -1,4 +1,4 @@
-#tweet-text {
+.tweet-text {
   background-color:  #f4f1ec;
   border: none;
   width: 100%;
@@ -23,6 +23,10 @@
 
 .counter {
   font-family: 'Bungee';
+}
+
+.counter.negative {
+  color: red;
 }
 
 .tweet-interface {
