@@ -30,32 +30,32 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
+    <nav class="flex">
       <span>tweeter</span>
-      <div class="create-tweet">
+      <div class="flex create-tweet">
         <span><strong>Write</strong> a new tweet</span>
-        <div class="angle-brackets">
-          <i class="fas fa-angle-double-down"></i>
+        <div class="flex angle-brackets">
+          <i class=".hvr-wobble-vertical:hover fas fa-angle-double-down"></i>
         </div>
       </div>
     </nav>
 
     <!-- User avatar and name -->
-    <header>
-      <div class="avatar">
-          <img src="/images/profile-hex.png"> 
+    <header class="flex">
+      <div class="flex avatar">
+        <img src="/images/profile-hex.png"> 
       </div>
-      <div class="name">
+      <div class="flex name">
           <h2>Jordan Cronier</h2>
       </div>
   </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
-        <h2 class="tweet-title">Compose Tweet</h2>
+      <section class="flex new-tweet">
+        <h2 class="flex tweet-title">Compose Tweet</h2>
         <form action="/tweets" method="POST">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <footer class="tweet-interface">
+          <footer class="flex tweet-interface">
             <button class="tweet-button" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </footer>

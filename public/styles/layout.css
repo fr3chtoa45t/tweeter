@@ -27,3 +27,7 @@ body {
 .container {
   width: 90%;
 }
+
+.flex {
+  display: flex;
+}
