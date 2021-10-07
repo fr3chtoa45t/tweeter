@@ -9,6 +9,14 @@
   resize: none;
 }
 
+.error {
+  border: solid red;
+  color: red;
+  margin-top: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+}
+
 .new-tweet {
   height: 250px;
   flex-direction: column;
@@ -31,9 +39,4 @@
 
 .tweet-interface {
   justify-content: space-between;
-}
-
-.tweet-title {
-  justify-content: center;
-  margin: none;
 }
