@@ -17,17 +17,19 @@ nav > span {
 
 .create-tweet {
   font-family: 'Source Sans Pro', sans-serif;
+  background-color: transparent;
+  border: none;
   flex-direction: column;
   justify-content: center;
+  cursor: pointer;
 }
 
 .angle-brackets {
   justify-content: center;
   color: red;
-  cursor: pointer;
 }
 
-.angle-brackets:hover {
+.create-tweet:hover .angle-brackets {
   animation: bounce 1.5s infinite;
 }
 

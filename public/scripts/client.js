@@ -58,7 +58,7 @@ const validate = function (text) {
 };
 
 $("document").ready(() => {
-
+  $(".new-tweet").hide();
   const loadTweets = function () {
     $.get("/tweets")
       .then(tweets => {
@@ -82,4 +82,9 @@ $("document").ready(() => {
         });
     }
   });
+
+  $(".create-tweet").click(() => {
+    $("#error").slideUp();
+    $(".new-tweet").slideToggle();
+  })
 });

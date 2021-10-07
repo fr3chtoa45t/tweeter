@@ -41,12 +41,12 @@
   <!-- Top nav bar (fixed) -->
   <nav class="flex">
     <span>tweeter</span>
-    <div class="flex create-tweet">
+    <button class="create-tweet" type="button">
       <span><strong>Write</strong> a new tweet</span>
       <div class="flex angle-brackets">
         <i class=".hvr-wobble-vertical:hover fas fa-angle-double-down"></i>
       </div>
-    </div>
+    </button>
   </nav>
 
   <!-- User avatar and name -->
@@ -62,7 +62,7 @@
   <!-- Page-specific (main) content here -->
   <main id="tweet-container" class="container">
     <div id="error" class="error" hidden></div>
-    <section class="flex new-tweet">
+    <section id="tweet-form" class="flex new-tweet" hidden>
       <form id="tweet" action="/tweets" method="POST">
         <textarea name="text" class="tweet-text" placeholder="What are you humming about?"></textarea>
         <footer class="flex tweet-interface">
