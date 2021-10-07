@@ -9,7 +9,6 @@ const escape = function (str) {
   return div.innerHTML;
 };
 
-
 const createTweet = function (tweetData) {
   return $(`
   <br>
@@ -58,6 +57,8 @@ const validate = function (text) {
 };
 
 $("document").ready(() => {
+
+  // Fetch and render new tweets
   $(".new-tweet").hide();
   const loadTweets = function () {
     $.get("/tweets")
@@ -68,6 +69,7 @@ $("document").ready(() => {
 
   loadTweets();
 
+  // Submit tweet to server
   $("#tweet").submit(function (event) {
     event.preventDefault();
     $("#error").hide();
@@ -83,6 +85,7 @@ $("document").ready(() => {
     }
   });
 
+  // Toggle new tweet form
   $(".create-tweet").click(() => {
     $("#error").slideUp();
     $(".new-tweet").slideToggle(() => {
@@ -90,14 +93,13 @@ $("document").ready(() => {
     });
   })
 
+  // Submit tweet when enter key pressed
   $(document).on("keydown",function(e){
-
-    var keyCode = e.which || e.keyCode;
-    if(keyCode == 13) // enter key code
+    const keyCode = e.which || e.keyCode;
+    if(keyCode == 13)
     {
       e.preventDefault();
       $("#tweet").submit();
     }
- 
  });
 });
