@@ -12,6 +12,7 @@
 .error {
   border: solid red;
   color: red;
+  margin-top: 20px;
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
 }
@@ -19,6 +20,7 @@
 .new-tweet {
   height: 150px;
   flex-direction: column;
+  /* justify-content: space-evenly; */
 }
 
 .tweet-button {

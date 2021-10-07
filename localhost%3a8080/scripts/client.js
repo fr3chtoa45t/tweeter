@@ -80,7 +80,6 @@ $("document").ready(() => {
         .then(() => {
           loadTweets();
           $(".tweet-text").val("");
-          $(".counter").val(140);
         });
     }
   });
