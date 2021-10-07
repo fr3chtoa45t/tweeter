@@ -85,6 +85,19 @@ $("document").ready(() => {
 
   $(".create-tweet").click(() => {
     $("#error").slideUp();
-    $(".new-tweet").slideToggle();
+    $(".new-tweet").slideToggle(() => {
+      $(".tweet-text").focus();
+    });
   })
+
+  $(document).on("keydown",function(e){
+
+    var keyCode = e.which || e.keyCode;
+    if(keyCode == 13) // enter key code
+    {
+      e.preventDefault();
+      $("#tweet").submit();
+    }
+ 
+ });
 });
