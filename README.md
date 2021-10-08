@@ -15,7 +15,7 @@ Tweeter uses the Ajax javascript library to make asynchronous requests for tweet
 ## Getting Started
 
 #### Clone the respository
-```git clone https://github.com/fr3chtoa45t/tinyapp```
+```git clone git@github.com:fr3chtoa45t/tweeter.git```
 #### Install dependencies
 ```npm install```
 #### Run the server
