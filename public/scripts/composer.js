@@ -17,11 +17,13 @@ $("document").ready(() => {
     if ($(window).scrollTop() < 100) {
       $("#scroll-top").fadeOut();
       $(".create-tweet").fadeIn();
+      $("nav").find("span").fadeIn();
       return;
     }
 
     $("#scroll-top").fadeIn();
     $(".create-tweet").fadeOut();
+    $("nav").find("span").fadeOut();
   })
 
   $("#scroll-top").click(() => {

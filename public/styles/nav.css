@@ -20,6 +20,7 @@ nav .create-tweet {
   align-items: center;
   cursor: pointer;
   width: 7em;
+  padding: 0;
 }
 nav .create-tweet div {
   justify-content: flex-end;
