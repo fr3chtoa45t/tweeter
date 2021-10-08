@@ -6,11 +6,11 @@ Tweeter uses the Ajax javascript library to make asynchronous requests for tweet
 
 ## Final Product
 
-!["Tweeter Home Page"](https://github.com/fr3chtoa45t/tweeter/blob/main/docs/urls-home.png)
+!["Tweeter Home Page"](https://github.com/fr3chtoa45t/tweeter/blob/4a0634bce40720de6695c3016758f61fb1c02595/public/docs/home.png)
 
-!["Tweeter Tablet View"](https://github.com/fr3chtoa45t/tweeter/blob/main/docs/urls-index.png)
+!["Tweeter Tablet View"](https://github.com/fr3chtoa45t/tweeter/blob/4a0634bce40720de6695c3016758f61fb1c02595/public/docs/tablet-view.png)
 
-!["Compose Tweet"](https://github.com/fr3chtoa45t/tweeter/blob/main/docs/urls-show.png)
+!["Compose Tweet"](https://github.com/fr3chtoa45t/tweeter/blob/4a0634bce40720de6695c3016758f61fb1c02595/public/docs/compose-tweet.png)
 
 ## Getting Started
 
