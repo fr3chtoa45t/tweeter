@@ -15,9 +15,16 @@ $tweet-background-color: #f4f1ec;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (max-width: 1920px) {
   .header {
     width: 35%;
+    margin: 0 3.75%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .header {
+    width: 672px;
     margin: 0 3.75%;
   }
 }

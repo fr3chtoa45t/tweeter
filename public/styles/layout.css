@@ -32,3 +32,14 @@ html body main {
     padding: 200px 0;
   }
 }
+@media only screen and (min-width: 1920px) {
+  main {
+    width: 960px;
+    max-width: 960px;
+    margin: 0 3.75%;
+  }
+
+  body {
+    justify-content: space-evenly;
+  }
+}

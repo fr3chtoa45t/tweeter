@@ -11,12 +11,12 @@ const escape = function (str) {
 
 const validate = function (text) {
   if (text.length === 0) {
-    $("#error").slideDown("fast").text("📢 📢 📢 Your tweet is empty! 📢 📢 📢");
+    $("#error").slideDown("slow").text("📢 📢 📢 Your tweet is empty! 📢 📢 📢");
     return false;
   }
 
   if (text.length > 140) {
-    $("#error").slideDown("fast").text("📢 📢 📢 Your tweet exceeds maximum amount of characters! 📢 📢 📢");
+    $("#error").slideDown("slow").text("📢 📢 📢 Your tweet exceeds maximum amount of characters! 📢 📢 📢");
     return false;
   }
 
