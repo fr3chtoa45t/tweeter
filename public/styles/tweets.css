@@ -20,10 +20,18 @@
 .tweet header .user span {
   margin-left: 1em;
 }
-.tweet section {
+.tweet .tweet-content {
   font-weight: 600;
   padding: 10px;
   flex: 2;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 .tweet footer {
   justify-content: space-between;
@@ -44,7 +52,6 @@
   cursor: pointer;
 }
 
-/* FIXME: none-wrapping long words*/
 .tweet:hover {
   box-shadow: 5px 5px lightslategray;
 }

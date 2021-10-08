@@ -3,42 +3,11 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-};
-
-const createTweet = function (tweetData) {
-  return $(`
-  <article class="flex tweet">
-    <header class="flex">
-      <div class="flex user">
-        <img src=${tweetData.user.avatars}></img>
-        <span>${tweetData.user.name}</span>
-      </div>
-      <span class='handle'>${tweetData.user.handle}</span>
-    </header>
-    <section class="flex">
-      ${escape(tweetData.content.text)}
-    </section>
-    <footer class="flex">
-      <span>${timeago.format(tweetData.created_at)}</span>
-      <div class="flex icons">
-        <i class="fas fa-flag"></i>
-        <i class="fas fa-retweet"></i>
-        <i class="fas fa-heart"></i>
-      </div>
-    </footer>
-  </article>
-  `);
-};
-
-const renderTweet = function (tweets) {
-  $('#tweets-container').empty();
-  for (const tweet of tweets) {
-    $('#tweets-container').prepend(createTweet(tweet));
-  }
 };
 
 const validate = function (text) {
@@ -55,21 +24,54 @@ const validate = function (text) {
   return true;
 };
 
+const createTweet = function (tweetData) {
+  return $(`
+  <article class="flex tweet">
+    <header class="flex">
+      <div class="flex user">
+        <img src=${tweetData.user.avatars}></img>
+        <span>${tweetData.user.name}</span>
+      </div>
+      <span class='handle'>${tweetData.user.handle}</span>
+    </header>
+    <section class="tweet-content">
+      ${escape(tweetData.content.text)}
+    </section>
+    <footer class="flex">
+      <span>${timeago.format(tweetData.created_at)}</span>
+      <div class="flex icons">
+        <i class="fas fa-flag"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="fas fa-heart"></i>
+      </div>
+    </footer>
+  </article>
+  `);
+};
+
+const renderTweets = function (tweets) {
+  $('#tweets-container').empty();
+  for (const tweet of tweets) {
+    $('#tweets-container').prepend(createTweet(tweet));
+  }
+};
+
+const loadTweet = function () {
+  $.get("/tweets")
+    .then(tweets => {
+      renderTweets(tweets);
+    });
+};
+
 $("document").ready(() => {
 
   // Fetch and render new tweets
-  $(".new-tweet").hide();
-  const loadTweets = function () {
-    $.get("/tweets")
-      .then(tweets => {
-        renderTweet(tweets);
-      });
-  };
+  $("#tweet-form").hide();
 
-  loadTweets();
+  loadTweet();
 
   // Submit tweet to server
-  $("#tweet").submit(function (event) {
+  $("#tweet-form").submit(function (event) {
     event.preventDefault();
     $("#error").hide();
     const tweet = $(this).serialize();
@@ -78,7 +80,7 @@ $("document").ready(() => {
     if (validate(tweetText)) {
       $.post("/tweets", tweet)
         .then(() => {
-          loadTweets();
+          loadTweet();
           $(".tweet-text").val("");
           $(".counter").val(140);
         });
@@ -88,7 +90,7 @@ $("document").ready(() => {
   // Toggle new tweet form
   $(".create-tweet").click(() => {
     $("#error").slideUp();
-    $(".new-tweet").slideToggle(() => {
+    $("#tweet-form").slideToggle(() => {
       $(".tweet-text").focus();
     });
   })
@@ -99,7 +101,7 @@ $("document").ready(() => {
     if(keyCode == 13)
     {
       e.preventDefault();
-      $("#tweet").submit();
+      $("#tweet-form").submit();
     }
  });
 });

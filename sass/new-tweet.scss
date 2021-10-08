@@ -4,17 +4,6 @@ $nav-font-color: #FFFFFF;
 $header-color: goldenrod;
 $tweet-background-color: #f4f1ec;
 
-.tweet-text {
-  background-color: $tweet-background-color;
-  border: none;
-  width: 100%;
-  height: 3em;
-  border-bottom: solid grey;
-  font-family: 'Source Sans Pro', sans-serif;
-  outline: none;
-  resize: none;
-}
-
 .error {
   border: solid red;
   color: red;
@@ -22,25 +11,32 @@ $tweet-background-color: #f4f1ec;
   text-align: center;
 }
 
-.new-tweet {
+#tweet-form {
   height: 150px;
   flex-direction: column;
-}
+  .tweet-text {
+    background-color: $tweet-background-color;
+    border: none;
+    width: 100%;
+    height: 3em;
+    border-bottom: solid grey;
+    font-family: 'Source Sans Pro', sans-serif;
+    outline: none;
+    resize: none;
+  }
+  footer { 
+    justify-content: space-between; 
+    .tweet-button {
+      font-family: 'Bungee';
+      color: $nav-font-color;
+      background-color: $primary-color;
+    }
 
-.tweet-button {
-  font-family: 'Bungee';
-  color: $nav-font-color;
-  background-color: $primary-color;
-}
-
-.counter {
-  font-family: 'Bungee';
-}
-
-.counter.negative {
-  color: red;
-}
-
-.tweet-interface {
-  justify-content: space-between;
+    .counter {
+      font-family: 'Bungee';
+    }
+    .counter.negative {
+      color: red;
+    }
+  }
 }

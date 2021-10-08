@@ -1,16 +1,30 @@
 $("document").ready(() => {
+  $(".tweet-text").on("input", function() {
+    const maxCharacters = 140;
+    const len = maxCharacters - $(this).val().length;
+  
+    // Next element with counter class
+    const counter = $(this).parent().find(".counter");
+  
+      // Red font characters over max
+      if (len < 0) $(counter).addClass("negative");
+      if (len >= 0) $(counter).removeClass("negative");
+  
+      $(counter).html(len);
+    });
+
   $(window).scroll(() => {
     if ($(window).scrollTop() < 100) {
-      $("#scroll").fadeOut();
+      $("#scroll-top").fadeOut();
       $(".create-tweet").fadeIn();
       return;
     }
 
-    $("#scroll").fadeIn();
+    $("#scroll-top").fadeIn();
     $(".create-tweet").fadeOut();
   })
 
-  $("#scroll").click(() => {
+  $("#scroll-top").click(() => {
     $("html, body").animate({scrollTop: 0}, 500);
     $("#error").slideUp();
     $(".new-tweet").slideDown(() => {

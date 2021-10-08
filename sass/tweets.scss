@@ -25,10 +25,20 @@ $tweet-background-color: #f4f1ec;
       }
     }
   }
-  section {
+  .tweet-content {
     font-weight: 600;
     padding: 10px;
     flex: 2;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  
+    // Breaks long words up
+    -ms-word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
   }
   footer {
     justify-content: space-between;
@@ -49,7 +59,6 @@ $tweet-background-color: #f4f1ec;
     }
   }
 }
-/* FIXME: none-wrapping long words*/
 
 .tweet:hover {
   box-shadow: 5px 5px lightslategray;

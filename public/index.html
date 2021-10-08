@@ -28,7 +28,9 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
@@ -45,7 +47,7 @@
   <!-- Top nav bar (fixed) -->
   <nav class="flex">
     <div>
-      <span>tweeter</span>
+      <span>Tweeter</span>
       <img src="images/favicon-32x32.png">
     </div>
     <button class="flex create-tweet" type="button">
@@ -61,20 +63,18 @@
   </header>
 
   <!-- Page-specific (main) content here -->
-  <main id="tweet-container" class="container">
+  <main class="container">
     <div id="error" class="error" hidden></div>
-    <section id="tweet-form" class="flex new-tweet" hidden>
-      <form id="tweet" action="/tweets" method="POST">
-        <textarea name="text" class="tweet-text" placeholder="What are you humming about?"></textarea>
-        <footer class="flex tweet-interface">
-          <button class="tweet-button" type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </footer>
-      </form>
-    </section>
+    <form id="tweet-form" action="/tweets" method="POST">
+      <textarea name="text" class="tweet-text" placeholder="What are you humming about?"></textarea>
+      <footer class="flex">
+        <button class="tweet-button" type="submit">Tweet</button>
+        <output name="counter" class="counter" for="text">140</output>
+      </footer>
+    </form>
     <section id="tweets-container"></section>
-    <button id="scroll" type="button" class="fas fa-angle-double-up"></button>
+    <button id="scroll-top" type="button" class="fas fa-angle-double-up"></button>
   </main>
-  <script type="text/javascript" src="scripts/composer-char-counter.js"></script>
 </body>
+
 </html>

@@ -1,4 +1,15 @@
-.tweet-text {
+.error {
+  border: solid red;
+  color: red;
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+}
+
+#tweet-form {
+  height: 150px;
+  flex-direction: column;
+}
+#tweet-form .tweet-text {
   background-color: #f4f1ec;
   border: none;
   width: 100%;
@@ -8,33 +19,17 @@
   outline: none;
   resize: none;
 }
-
-.error {
-  border: solid red;
-  color: red;
-  font-family: "Source Sans Pro", sans-serif;
-  text-align: center;
+#tweet-form footer {
+  justify-content: space-between;
 }
-
-.new-tweet {
-  height: 150px;
-  flex-direction: column;
-}
-
-.tweet-button {
+#tweet-form footer .tweet-button {
   font-family: "Bungee";
   color: #FFFFFF;
   background-color: #4056A1;
 }
-
-.counter {
+#tweet-form footer .counter {
   font-family: "Bungee";
 }
-
-.counter.negative {
+#tweet-form footer .counter.negative {
   color: red;
-}
-
-.tweet-interface {
-  justify-content: space-between;
 }
