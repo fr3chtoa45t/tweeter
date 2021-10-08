@@ -1,6 +1,6 @@
 /**
  * Client-side javascript operations using ajax
- * 
+ *
  * Creator: Jordan Cronier
  *
  */
@@ -11,14 +11,14 @@
  */
 
 // Escapes user input from tweet form
-const escape = function (str) {
+const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
 // Validates character limits from form
-const validate = function (text) {
+const validate = function(text) {
   if (text.length === 0) {
     $("#error").slideDown("slow").text("📢 📢 📢 Your tweet is empty! 📢 📢 📢");
     return false;
@@ -32,7 +32,7 @@ const validate = function (text) {
   return true;
 };
 
-const createTweet = function (tweetData) {
+const createTweet = function(tweetData) {
   return $(`
   <article class="flex tweet">
     <header class="flex">
@@ -57,14 +57,14 @@ const createTweet = function (tweetData) {
   `);
 };
 
-const renderTweets = function (tweets) {
+const renderTweets = function(tweets) {
   $('#tweets-container').empty();
   for (const tweet of tweets) {
     $('#tweets-container').prepend(createTweet(tweet));
   }
 };
 
-const loadTweet = function () {
+const loadTweet = function() {
   $.get("/tweets")
     .then(tweets => {
       renderTweets(tweets);
@@ -84,7 +84,7 @@ $("document").ready(() => {
   loadTweet();
 
   // Submit tweet to server
-  $("#tweet-form").submit(function (event) {
+  $("#tweet-form").submit(function(event) {
     event.preventDefault();
     $("#error").hide();
     const tweet = $(this).serialize();
@@ -108,15 +108,14 @@ $("document").ready(() => {
     $("#tweet-form").slideToggle(() => {
       $(".tweet-text").focus();
     });
-  })
+  });
 
   // Submit tweet when enter key pressed
-  $(document).on("keydown",function(e){
+  $(document).on("keydown",function(e) {
     const keyCode = e.which || e.keyCode;
-    if(keyCode == 13)
-    {
+    if (keyCode === 13) {
       e.preventDefault();
       $("#tweet-form").submit();
     }
- });
+  });
 });

@@ -1,6 +1,6 @@
 /**
  * Functions for changing elements on site dynamically
- * 
+ *
  * Creator: Jordan Cronier
  *
  */
@@ -15,12 +15,12 @@ $("document").ready(() => {
     // Next element with counter class
     const counter = $(this).parent().find(".counter");
   
-      // Red font characters over max
-      if (len < 0) $(counter).addClass("negative");
-      if (len >= 0) $(counter).removeClass("negative");
+    // Red font characters over max
+    if (len < 0) $(counter).addClass("negative");
+    if (len >= 0) $(counter).removeClass("negative");
   
-      $(counter).val(len);
-    });
+    $(counter).val(len);
+  });
 
   // Window scrolled
   $(window).scroll(() => {
@@ -44,7 +44,7 @@ $("document").ready(() => {
 
     // App name
     $nav.find("span").fadeOut();
-  })
+  });
 
   // Scroll to top and compose tweet
   $("#scroll-top").click(() => {
