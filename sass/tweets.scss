@@ -1,0 +1,56 @@
+$primary-color: #4056A1;
+$secondary-color: #545149;
+$nav-font-color: #FFFFFF;
+$header-color: goldenrod;
+$tweet-background-color: #f4f1ec;
+
+.tweet {
+  border: solid;
+  flex-direction: column;
+  height: 250px;
+  padding: 10px;
+  margin-bottom: 20px;
+  header {
+    justify-content: space-between;
+    align-items: center;
+    .handle {
+      color: lightgrey;
+      font-weight: 600;
+    }
+    .user {
+      align-items:center;
+      justify-content: space-around;
+      span {
+        margin-left: 1em;
+      }
+    }
+  }
+  section {
+    font-weight: 600;
+    padding: 10px;
+    flex: 2;
+  }
+  footer {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1;
+    border-top: solid;
+    font-size: 0.6em;
+    padding: 5px 10px 0 10px;
+    .icons {
+      width: 60px;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 5px;
+      :hover {
+        color: $header-color;
+        cursor: pointer;
+      }
+    }
+  }
+}
+/* FIXME: none-wrapping long words*/
+
+.tweet:hover {
+  box-shadow: 5px 5px lightslategray;
+}

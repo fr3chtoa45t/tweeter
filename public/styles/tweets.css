@@ -1,28 +1,31 @@
-article.tweet {
+.tweet {
   border: solid;
   flex-direction: column;
   height: 250px;
   padding: 10px;
   margin-bottom: 20px;
 }
-
-article.tweet:hover {
-  box-shadow: 5px 5px lightslategray;
-}
-
-article.tweet header {
+.tweet header {
   justify-content: space-between;
   align-items: center;
- 
 }
-
-article.tweet section {
+.tweet header .handle {
+  color: lightgrey;
+  font-weight: 600;
+}
+.tweet header .user {
+  align-items: center;
+  justify-content: space-around;
+}
+.tweet header .user span {
+  margin-left: 1em;
+}
+.tweet section {
   font-weight: 600;
   padding: 10px;
   flex: 2;
 }
-
-article.tweet footer {
+.tweet footer {
   justify-content: space-between;
   align-items: flex-start;
   flex: 1;
@@ -30,25 +33,18 @@ article.tweet footer {
   font-size: 0.6em;
   padding: 5px 10px 0 10px;
 }
-
-.icons {
+.tweet footer .icons {
   width: 60px;
   align-items: center;
   justify-content: space-between;
   padding-top: 5px;
 }
-
-.icons i:hover {
+.tweet footer .icons :hover {
   color: goldenrod;
+  cursor: pointer;
 }
 
-.username {
-  color: lightgrey;
-  font-weight: 600;
-}
-
-.user {
-  align-items:center;
-  justify-content: space-around;
-  width: 25%;
+/* FIXME: none-wrapping long words*/
+.tweet:hover {
+  box-shadow: 5px 5px lightslategray;
 }

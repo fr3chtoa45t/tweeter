@@ -1,23 +1,31 @@
+$primary-color: #4056A1;
+$secondary-color: #545149;
+$nav-font-color: #FFFFFF;
+$header-color: goldenrod;
+$tweet-background-color: #f4f1ec;
+
 @media only screen and (max-width: 1024px) {
   .header {
     width: 100%;
     margin-bottom: 10px;
   }
 }
+
 @media only screen and (min-width: 1024px) {
   .header {
     width: 35%;
     margin: 0 3.75%;
   }
 }
+
 .header {
   height: 400px;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-color: goldenrod;
-  background-image: url("../images/blizzard.png");
-}
-.header div {
-  color: whitesmoke;
+  background-color: $header-color;
+  background-image: url('../images/blizzard.png');
+  div {
+    color: whitesmoke;
+  }
 }

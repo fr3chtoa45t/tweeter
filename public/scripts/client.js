@@ -17,7 +17,7 @@ const createTweet = function (tweetData) {
         <img src=${tweetData.user.avatars}></img>
         <span>${tweetData.user.name}</span>
       </div>
-      <span class="flex username">${tweetData.user.handle}</span>
+      <span class='handle'>${tweetData.user.handle}</span>
     </header>
     <section class="flex">
       ${escape(tweetData.content.text)}

@@ -1,0 +1,67 @@
+$primary-color: #4056A1;
+$secondary-color: #545149;
+$nav-font-color: #FFFFFF;
+$header-color: goldenrod;
+$tweet-background-color: #f4f1ec;
+
+nav {
+  height: 100px;
+  width: 100%;
+  color: $nav-font-color;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em;
+  position: fixed;
+  top: 0;
+  span {
+    font-family: 'Bungee';
+    font-size: 1em;
+  }
+  .create-tweet {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: transparent;
+    border: none;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 7em;
+    div {
+      justify-content: flex-end;
+      font-size: 0.8em;
+    }
+    .angle-brackets {
+      color: red;
+    }
+  }
+}
+
+.create-tweet:hover .angle-brackets {
+  animation: bounce 1.5s infinite;
+}
+
+@media only screen and (max-width: 1024px) {
+  nav {
+    background-color: transparent;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: $primary-color;
+  }
+}
+
+@keyframes bounce {
+  20%, 50%, 80%, to {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(20px);
+  }
+  70% {
+    transform: translateY(20px);
+  }
+  90% {
+    transform: translateY(20px);
+  }
+}

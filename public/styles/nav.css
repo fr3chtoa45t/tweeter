@@ -1,42 +1,31 @@
 nav {
-  height: 120px;
+  height: 100px;
   width: 100%;
   color: #FFFFFF;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1em 0 1em;
+  padding: 0 1em;
   position: fixed;
   top: 0;
 }
-
-@media only screen and (max-width: 1024px) {
-  nav {
-    background-color: transparent;
-  }
+nav span {
+  font-family: "Bungee";
+  font-size: 1em;
 }
-
-@media only screen and (min-width: 1024px) {
-  nav {
-    background-color: #4056A1;
-  }
-}
-
-nav > span {
-  font-family: 'Bungee';
-  font-size: 40px;
-}
-
-.create-tweet {
-  font-family: 'Source Sans Pro', sans-serif;
+nav .create-tweet {
+  font-family: "Source Sans Pro", sans-serif;
   background-color: transparent;
   border: none;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  width: 7em;
 }
-
-.angle-brackets {
-  justify-content: center;
+nav .create-tweet div {
+  justify-content: flex-end;
+  font-size: 0.8em;
+}
+nav .create-tweet .angle-brackets {
   color: red;
 }
 
@@ -44,6 +33,16 @@ nav > span {
   animation: bounce 1.5s infinite;
 }
 
+@media only screen and (max-width: 1024px) {
+  nav {
+    background-color: transparent;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+  }
+}
 @keyframes bounce {
   20%, 50%, 80%, to {
     transform: translateY(0);
