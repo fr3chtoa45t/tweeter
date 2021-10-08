@@ -25,7 +25,7 @@ $("document").ready(() => {
   // Window scrolled
   $(window).scroll(() => {
     const $scrollButton = $("#scroll-top");
-    const $composeButton = $(".create-tweet");
+    const $composeButton = $("#compose");
     const $nav = $("nav");
 
     // window at top

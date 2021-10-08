@@ -103,7 +103,7 @@ $("document").ready(() => {
   });
 
   // Toggle new tweet form
-  $(".compose-tweet").click(() => {
+  $("#compose").click(() => {
     $("#error").slideUp();
     $("#tweet-form").slideToggle(() => {
       $(".tweet-text").focus();

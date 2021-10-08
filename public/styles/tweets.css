@@ -16,7 +16,7 @@
   align-items: center;
 }
 .tweet header .handle {
-  color: lightgrey;
+  color: #718d96;
   font-weight: 600;
 }
 .tweet header .user {
