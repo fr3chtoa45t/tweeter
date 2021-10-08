@@ -19,7 +19,7 @@ Tweeter uses the Ajax javascript library to make asynchronous requests for tweet
 #### Install dependencies
 ```npm install```
 #### Run the server
-```npm start```
+```npm run local```
 ##### Go to <http://localhost:8080/> to use the app!
 
 #### Optional: to edit scss files in /sass directory
