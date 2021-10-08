@@ -1,3 +1,9 @@
+/**
+ * Nav-bar and compose tweet buttons
+ * 
+ * Creator: Jordan Cronier
+ *
+ */
 nav {
   height: 100px;
   width: 100%;
@@ -12,7 +18,7 @@ nav span {
   font-family: "Bungee";
   font-size: 1em;
 }
-nav .create-tweet {
+nav .compose-tweet {
   font-family: "Source Sans Pro", sans-serif;
   background-color: transparent;
   border: none;
@@ -22,15 +28,16 @@ nav .create-tweet {
   width: 7em;
   padding: 0;
 }
-nav .create-tweet div {
+nav .compose-tweet div {
+  color: #FFFFFF;
   justify-content: flex-end;
   font-size: 0.8em;
 }
-nav .create-tweet .angle-brackets {
+nav .compose-tweet .angle-brackets {
   color: red;
 }
 
-.create-tweet:hover .angle-brackets {
+.compose-tweet:hover .angle-brackets {
   animation: bounce 1.5s infinite;
 }
 
@@ -41,7 +48,8 @@ nav .create-tweet .angle-brackets {
 }
 @media only screen and (min-width: 1024px) {
   nav {
-    background-color: #4056A1;
+    background-color: #172452;
+    background-image: url("../images/blizzard.png");
   }
 }
 @keyframes bounce {

@@ -1,3 +1,9 @@
+/**
+ * Compose new tweet form
+ * 
+ * Creator: Jordan Cronier
+ *
+ */
 .error {
   border: solid red;
   color: red;
@@ -10,7 +16,7 @@
   flex-direction: column;
 }
 #tweet-form .tweet-text {
-  background-color: #f4f1ec;
+  background-color: #e4d7c2;
   border: none;
   width: 100%;
   height: 3em;
@@ -25,7 +31,7 @@
 #tweet-form footer .tweet-button {
   font-family: "Bungee";
   color: #FFFFFF;
-  background-color: #4056A1;
+  background-color: #172452;
 }
 #tweet-form footer .counter {
   font-family: "Bungee";

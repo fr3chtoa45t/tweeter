@@ -1,3 +1,9 @@
+/**
+ * Display tweets fetched from server
+ * 
+ * Creator: Jordan Cronier
+ *
+ */
 .tweet {
   border: solid;
   flex-direction: column;
@@ -48,7 +54,7 @@
   padding-top: 5px;
 }
 .tweet footer .icons :hover {
-  color: goldenrod;
+  color: #3581ad;
   cursor: pointer;
 }
 

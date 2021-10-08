@@ -1,14 +1,23 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
+/**
+ * Client-side javascript operations using ajax
+ * 
+ * Creator: Jordan Cronier
+ *
  */
+
+/**
+ * Tweet helper and request functions
+ *
+ */
+
+// Escapes user input from tweet form
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
+// Validates character limits from form
 const validate = function (text) {
   if (text.length === 0) {
     $("#error").slideDown("slow").text("📢 📢 📢 Your tweet is empty! 📢 📢 📢");
@@ -62,6 +71,11 @@ const loadTweet = function () {
     });
 };
 
+/**
+ * DOM manipulation
+ *
+ */
+
 $("document").ready(() => {
 
   // Fetch and render new tweets
@@ -80,6 +94,8 @@ $("document").ready(() => {
       $.post("/tweets", tweet)
         .then(() => {
           loadTweet();
+
+          // reset form
           $(".tweet-text").val("");
           $(".counter").val(140);
         });
@@ -87,7 +103,7 @@ $("document").ready(() => {
   });
 
   // Toggle new tweet form
-  $(".create-tweet").click(() => {
+  $(".compose-tweet").click(() => {
     $("#error").slideUp();
     $("#tweet-form").slideToggle(() => {
       $(".tweet-text").focus();

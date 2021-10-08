@@ -1,8 +1,15 @@
-$primary-color: #4056A1;
-$secondary-color: #545149;
-$nav-font-color: #FFFFFF;
-$header-color: goldenrod;
-$tweet-background-color: #f4f1ec;
+/**
+ * Display tweets fetched from server
+ * 
+ * Creator: Jordan Cronier
+ *
+ */
+
+ $primary-color: #172452;
+ $secondary-color: #545149;
+ $nav-font-color: #FFFFFF;
+ $header-color: rgb(53, 129, 173);
+ $tweet-background-color: #e4d7c2;
 
 .tweet {
   border: solid;
@@ -64,12 +71,14 @@ $tweet-background-color: #f4f1ec;
   box-shadow: 5px 5px lightslategray;
 }
 
+// Mobile screen size and below
 @media only screen and (min-width: 320px) and (max-width: 420px) {
   .tweet-content {
     font-size: 18px;
   }
 }
 
+// Tablet screen size and below
 @media only screen and (max-width: 1024px) {
   .tweet-content {
     font-size: 18px;

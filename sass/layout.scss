@@ -1,8 +1,15 @@
-$primary-color: #4056A1;
-$secondary-color: #545149;
-$nav-font-color: #FFFFFF;
-$header-color: goldenrod;
-$tweet-background-color: #f4f1ec;
+/**
+ * Primary layout of site
+ * 
+ * Creator: Jordan Cronier
+ *
+ */
+
+ $primary-color: #172452;
+ $secondary-color: #545149;
+ $nav-font-color: #FFFFFF;
+ $header-color: rgb(53, 129, 173);
+ $tweet-background-color: #e4d7c2;
 
 html {
   box-sizing: border-box;
@@ -26,6 +33,7 @@ html {
   display: flex;
 }
 
+// Tablet screen size and below
 @media only screen and (max-width: 1024px) {
   body {
     padding-bottom: 200px;
@@ -33,19 +41,20 @@ html {
   }
 }
 
+// Regular desktop screen size
 @media only screen and (min-width: 1024px) {
   body {
     padding: 200px 0;
   }
 }
 
+// Max desktop screen size changes
 @media only screen and (min-width: 1920px) {
   main {
     width: 960px;
     max-width: 960px;
     margin: 0 3.75%;
   }
-
   body {
     justify-content: space-evenly;
   }

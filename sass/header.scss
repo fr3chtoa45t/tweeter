@@ -1,9 +1,29 @@
-$primary-color: #4056A1;
+/**
+ * Header with user information
+ * 
+ * Creator: Jordan Cronier
+ *
+ */
+
+$primary-color: #172452;
 $secondary-color: #545149;
 $nav-font-color: #FFFFFF;
-$header-color: goldenrod;
-$tweet-background-color: #f4f1ec;
+$header-color: rgb(53, 129, 173);
+$tweet-background-color: #e4d7c2;
 
+.header {
+  height: 400px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $header-color;
+  background-image: url('../images/blizzard.png');
+  div {
+    color: whitesmoke;
+  }
+}
+
+// Tablet screen size and below
 @media only screen and (max-width: 1024px) {
   .header {
     width: 100%;
@@ -15,6 +35,7 @@ $tweet-background-color: #f4f1ec;
   }
 }
 
+// Regular desktop screen size
 @media only screen and (min-width: 1024px) and (max-width: 1920px) {
   .header {
     width: 35%;
@@ -22,21 +43,11 @@ $tweet-background-color: #f4f1ec;
   }
 }
 
+// Max desktop screen size changes
 @media only screen and (min-width: 1920px) {
   .header {
-    width: 672px;
+    width: 400px;
+    max-width: 400px;
     margin: 0 3.75%;
-  }
-}
-
-.header {
-  height: 400px;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: $header-color;
-  background-image: url('../images/blizzard.png');
-  div {
-    color: whitesmoke;
   }
 }

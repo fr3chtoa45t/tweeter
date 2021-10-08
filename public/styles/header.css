@@ -1,3 +1,21 @@
+/**
+ * Header with user information
+ * 
+ * Creator: Jordan Cronier
+ *
+ */
+.header {
+  height: 400px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #3581ad;
+  background-image: url("../images/blizzard.png");
+}
+.header div {
+  color: whitesmoke;
+}
+
 @media only screen and (max-width: 1024px) {
   .header {
     width: 100%;
@@ -16,18 +34,8 @@
 }
 @media only screen and (min-width: 1920px) {
   .header {
-    width: 672px;
+    width: 400px;
+    max-width: 400px;
     margin: 0 3.75%;
   }
-}
-.header {
-  height: 400px;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: goldenrod;
-  background-image: url("../images/blizzard.png");
-}
-.header div {
-  color: whitesmoke;
 }

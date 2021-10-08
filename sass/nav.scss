@@ -1,8 +1,15 @@
-$primary-color: #4056A1;
-$secondary-color: #545149;
-$nav-font-color: #FFFFFF;
-$header-color: goldenrod;
-$tweet-background-color: #f4f1ec;
+/**
+ * Nav-bar and compose tweet buttons
+ * 
+ * Creator: Jordan Cronier
+ *
+ */
+
+ $primary-color: #172452;
+ $secondary-color: #545149;
+ $nav-font-color: #FFFFFF;
+ $header-color: rgb(53, 129, 173);
+ $tweet-background-color: #e4d7c2;
 
 nav {
   height: 100px;
@@ -17,7 +24,7 @@ nav {
     font-family: 'Bungee';
     font-size: 1em;
   }
-  .create-tweet {
+  .compose-tweet {
     font-family: 'Source Sans Pro', sans-serif;
     background-color: transparent;
     border: none;
@@ -27,6 +34,7 @@ nav {
     width: 7em;
     padding: 0;
     div {
+      color: $nav-font-color;
       justify-content: flex-end;
       font-size: 0.8em;
     }
@@ -36,22 +44,26 @@ nav {
   }
 }
 
-.create-tweet:hover .angle-brackets {
+.compose-tweet:hover .angle-brackets {
   animation: bounce 1.5s infinite;
 }
 
+// Tablet screen size and below
 @media only screen and (max-width: 1024px) {
   nav {
     background-color: transparent;
   }
 }
 
+// Regular desktop screen size
 @media only screen and (min-width: 1024px) {
   nav {
     background-color: $primary-color;
+    background-image: url("../images/blizzard.png");
   }
 }
 
+// Animate angle brackets in compose button
 @keyframes bounce {
   20%, 50%, 80%, to {
     transform: translateY(0);
