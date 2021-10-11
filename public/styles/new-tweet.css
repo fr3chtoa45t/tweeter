@@ -4,7 +4,7 @@
  * Creator: Jordan Cronier
  *
  */
-.error {
+#error {
   border: solid red;
   color: red;
   font-family: "Source Sans Pro", sans-serif;

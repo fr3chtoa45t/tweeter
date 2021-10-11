@@ -113,9 +113,12 @@ $("document").ready(() => {
   // Submit tweet when enter key pressed
   $(document).on("keydown",function(e) {
     const keyCode = e.which || e.keyCode;
-    if (keyCode === 13) {
+    const $tweetForm = $("#tweet-form");
+
+    // Submit if form visible
+    if ($tweetForm.is(":visible") && keyCode === 13) {
       e.preventDefault();
-      $("#tweet-form").submit();
+      $tweetForm.submit();
     }
   });
 });

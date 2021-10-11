@@ -33,7 +33,6 @@ Tweeter uses the Ajax javascript library to make asynchronous requests for tweet
 - jquery
 - ajax
 - body-parser
-- serve-favicon
 - md5
 - chance
 - sass

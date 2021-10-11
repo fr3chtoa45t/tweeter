@@ -24,7 +24,7 @@ nav {
     font-family: 'Bungee';
     font-size: 1em;
   }
-  .compose-tweet {
+  #compose {
     font-family: 'Source Sans Pro', sans-serif;
     background-color: transparent;
     border: none;
@@ -44,7 +44,7 @@ nav {
   }
 }
 
-.compose-tweet:hover .angle-brackets {
+#compose:hover .angle-brackets {
   animation: bounce 1.5s infinite;
 }
 
