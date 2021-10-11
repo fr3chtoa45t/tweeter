@@ -6,11 +6,9 @@ const PORT          = 8080;
 const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
-var favicon         = require('serve-favicon');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.use(favicon('/vagrant/projects/tweeter/public/images/favicon.ico'));
 
 
 // The in-memory database of tweets. It's a basic object with an array in it.
