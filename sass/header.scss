@@ -23,7 +23,7 @@ $tweet-background-color: #e4d7c2;
   }
 }
 
-// Tablet screen size and below
+/* Tablet screen size and below */
 @media only screen and (max-width: 1024px) {
   .header {
     width: 100%;
@@ -35,7 +35,7 @@ $tweet-background-color: #e4d7c2;
   }
 }
 
-// Regular desktop screen size
+/* Regular desktop screen size */
 @media only screen and (min-width: 1024px) and (max-width: 1920px) {
   .header {
     width: 35%;
@@ -43,7 +43,7 @@ $tweet-background-color: #e4d7c2;
   }
 }
 
-// Max desktop screen size changes
+/* Max desktop screen size changes */
 @media only screen and (min-width: 1920px) {
   .header {
     width: 400px;

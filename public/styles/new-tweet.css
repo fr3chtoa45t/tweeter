@@ -4,6 +4,7 @@
  * Creator: Jordan Cronier
  *
  */
+/* Character limits error */
 #error {
   border: solid red;
   color: red;

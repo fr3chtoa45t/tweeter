@@ -41,17 +41,20 @@ nav #compose .angle-brackets {
   animation: bounce 1.5s infinite;
 }
 
+/* Tablet screen size and below */
 @media only screen and (max-width: 1024px) {
   nav {
     background-color: transparent;
   }
 }
+/* Regular desktop screen size */
 @media only screen and (min-width: 1024px) {
   nav {
     background-color: #172452;
     background-image: url("../images/blizzard.png");
   }
 }
+/* Animate angle brackets in compose button */
 @keyframes bounce {
   20%, 50%, 80%, to {
     transform: translateY(0);

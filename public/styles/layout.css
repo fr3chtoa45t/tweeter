@@ -27,17 +27,20 @@ html body main {
   display: flex;
 }
 
+/* Tablet screen size and below */
 @media only screen and (max-width: 1024px) {
   body {
     padding-bottom: 200px;
     flex-direction: column;
   }
 }
+/* Regular desktop screen size */
 @media only screen and (min-width: 1024px) {
   body {
     padding: 200px 0;
   }
 }
+/* Max desktop screen size changes */
 @media only screen and (min-width: 1920px) {
   main {
     width: 960px;
